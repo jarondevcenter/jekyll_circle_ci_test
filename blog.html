@@ -1,0 +1,14 @@
+---
+layout: default
+title: Blog
+---
+<h1>Latest Posts</h1>
+
+<ul>
+  {% for post in site.posts %} <!--WHERE JEKYLL MAKES POSTS AVAILABLE-->
+    <li>      <!--URL PATH OF POST | PULLED FROM _post FILENAME--> 
+      <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+      {{ post.excerpt }} <!--FIRST PARAGRAPH OF CONTENT BY DEFAULT-->
+    </li>
+  {% endfor %}
+</ul>

@@ -1,0 +1,27 @@
+---
+layout: default
+writer: Jaron Variable
+---
+<h1>This post is Controlled by Layout: POST.HTML</h1>
+<h3>POST.HTML is linked to the files under the _posts folder</h3>
+<h3>The Content displayed on Layout: POST.HTML comes from the Body Text of the _posts files</h3>
+<hr>
+<!--LAYOUT INHERITANCE: POST LAYOUT USES THE SAME STRUCTURE AS THE DEFAULT LAYOUT-->
+<!--THIS INCLUDES THE head, title, link,  INFORMATION, -->
+<h2>{{page.name}}</h2>
+<h1>{{ page.title }}</h1><!--page is the current pag; THIS PULLS FROM THE TITLE in the post.md FILENAME, UNLESS A 'TITLE' IS SPECIFICALLY ASSIGNED IN THE FRONT MATTER -->
+<h3>The below name is coming from the 'writer' variable on the post.html layout: <h4 class="current">{{layout.writer}}</h4></h3>            
+<p> <!--Pulls in and Formats Date, comes in due to Front Matter, from the Date on the post.md file-->
+    {{ page.date | date_to_string }}
+    <!--Access all the Authors, where the 'author' name on the post.md file, matches the 'short_name' on the name.md file; link them together-->
+    {% assign author = site.authors | where: 'short_name', page.author | first %}
+    {% if author %}<!--If you find a match-->
+      - <a href="{{ author.url }}">{{ author.name }}</a><!--Display the Author's Name, with the url to their name.md file -->
+    {% endif %}
+  </p>
+
+<!--CONTENT IS PULLED FROM WHATEVER DIRECTORY MATCHES THE NAME OF THIS FILE-->
+<!--IN THIS EXAMPLE, THE FILENAME IS post.html; THEREFORE CONTENT IS PULLED FROM BODY OF EACH post.md file -->
+<!--AND WHEN THEIR URL IS RAN, IT DISPLAYS THAT CONTENT OVER HERE, BUT WITH THE FOLLOWING ADDT'L FORMATTING IN THIS LAYOUT-->
+
+{{ content }} 

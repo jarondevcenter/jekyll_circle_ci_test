@@ -1,0 +1,16 @@
+---
+layout: default
+title: Staff
+---
+<h1>Staff</h1>
+
+<ul><!--FOR EVERY AUTHOR FILE IN _authors-->
+  {% for author in site.authors %}<!--JEKYLL MAKES COLLECTIONS AVAILABLE HERE-->
+    <li>
+      <!--DISPLAY THE NAME, POSITION, AND CONTENT FROM THEIR md FILE-->
+      <h2><a href="{{author.url}}">{{author.name}}</a></h2>
+      <h3>{{ author.position }}</h3>
+      <p>{{ author.content | markdownify }}</p>
+    </li>
+  {% endfor %}
+</ul>
