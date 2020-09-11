@@ -1,0 +1,23 @@
+---
+layout: default
+---
+<h1>This page is Controlled by Layout AUTHOR.HTML</h1>
+<h3>AUTHOR.HTML is linked to the files under the _authors folder</h3>
+<h3>The Content displayed on Layout: AUTHOR.HTML comes from the Body Text of the _authors files</h3>
+<hr>
+<!--LAYOUT INHERITANCE: AUTHOR LAYOUT USES THE SAME STRUCTURE AS THE DEFAULT LAYOUT-->
+<!--This file is linked to the _authors/author_name.md files-->
+<!--Author's Name Link on their Blog Post-->
+<h1>{{ page.name }}</h1> <!--Jaron Manyama; from _authors/name.md file-->
+<h2>{{ page.position }}</h2><!--Blogger; from _authors_name.md file-->
+
+
+{{ content }}<!--Jaron is a Test Blogger (text on jaron.md file)-->
+
+<h2>Posts</h2>
+<ul><!--Access all the Posts, where the 'author' name on the post.md file, matches the 'short_name' on the name.md file; link them together-->
+  {% assign filtered_posts = site.posts | where: 'author', page.short_name %}<!--Post For Each Author-->
+  {% for post in filtered_posts %}<!--For each one of these posts, display the Post URL and the Post Title from the post.md 'filename'-->
+    <li><a href="{{ post.url }}">{{ post.title }}</a></li><!--This becomes the Banannas Link-->
+  {% endfor %}
+</ul>

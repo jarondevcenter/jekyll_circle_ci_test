@@ -1,0 +1,5 @@
+I"½<h1 id="about-page">About page</h1>
+
+<p>This page tells you a little bit about me.
+<!--INHERITS THE About on the default layout, therefore the Front Matter, title: About CAN BE USED--></p>
+:ET

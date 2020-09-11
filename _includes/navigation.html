@@ -1,0 +1,29 @@
+  
+  <nav><!--FOR EACH ITEM IN THE navigation.yml file-->
+    {% for item in site.data.navigation %}<!--ACCESSES _data/navigation.yml-->
+   <!--HOME & ABOUT LINKS --> <!--IF PG IS CURRENT PG, TURN LINK RED WITH CSS/SASS CLASS-->  <!--DISPLAY PG NAME-->
+      <a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>{{ item.name }}</a>
+    {% endfor %}
+  </nav>
+  
+  
+  <!--
+  <nav> 
+    {% for item in site.data.navigation %} 
+      <a href="{{ item.link }}" {% if page.url == item.link %}style="color: red;"{% endif %}>
+        {{ item.name }} 
+      </a>
+    {% endfor %}
+  </nav> -->
+
+
+  <!--CHECK IF EACH PAGE IS THE CURRENT PAGE, IF SO COLOR ITS LINK RED-->
+
+<!--<nav>
+    <a href="/" {% if page.url == "/" %}style="color: red;"{% endif %}>
+      Home
+    </a>
+    <a href="/about.html" {% if page.url == "/about.html" %}style="color: red;"{% endif %}>
+      About
+    </a>
+  </nav> -->
