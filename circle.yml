@@ -37,33 +37,33 @@ jobs:
           root: ./
           paths:
             - _site
-  deploy:
-    docker:
-      - image: node:8.10.0
-    steps:
-      - checkout 
-      - attach_workspace:
-          at: ./
-      - run:
-          name: Install and configure dependencies
-          command: 
-            npm install -g --silent gh-pages@2.0.1
-            git config user.email "jaron.manyama@sap.com"
-            git config user.name "jaron-manyama"
-      - run:
-          name: Deploy docs to gh-pages branch
-          command: gh-pages --dotfiles --message "[skip ci] Updates" --dist ./_site
-      - add_ssh_keys:
-          fingerprints:
-            - 9a:ee:c4:3e:cf:9a:be:a8:99:c7:90:b4:96:52:e0:04
- workflows:         
-   version: 2
-   test-deploy:
-     jobs:
-       - build
-       - deploy:
-           requires:
-             - build
-           filters:
-             branches:
-               only: master
+deploy:
+  docker:
+    - image: node:8.10.0
+  steps:
+    - checkout 
+    - attach_workspace:
+        at: ./
+    - run:
+        name: Install and configure dependencies
+        command: 
+          npm install -g --silent gh-pages@2.0.1
+          git config user.email "jaron.manyama@sap.com"
+          git config user.name "jaron-manyama"
+    - run:
+        name: Deploy docs to gh-pages branch
+        command: gh-pages --dotfiles --message "[skip ci] Updates" --dist ./_site
+    - add_ssh_keys:
+        fingerprints:
+          - 9a:ee:c4:3e:cf:9a:be:a8:99:c7:90:b4:96:52:e0:04
+workflows:         
+  version: 2
+  test-deploy:
+    jobs:
+      - build
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
