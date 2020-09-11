@@ -1,7 +1,6 @@
 version: 2
 jobs:
   build:
-    <<: *defaults
     docker:
       - image: circleci/ruby:2.7
     environment:
