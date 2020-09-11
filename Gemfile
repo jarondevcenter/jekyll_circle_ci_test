@@ -9,6 +9,7 @@ ruby '2.7.1'
 # gem "rails"
 gem "jekyll"
 gem "minima"
+gem "html-proofer"
 
 group :jekyll_plugins do
   gem 'jekyll-sitemap'
