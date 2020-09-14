@@ -1,9 +1,6 @@
-defaults: &defaults
-  working_directory: ~/repo
 version: 2
 jobs:
   build:
-    <<: *defaults
     docker:
       - image: circleci/ruby:2.7
     environment:
@@ -41,21 +38,28 @@ jobs:
           paths:
             - _site
   deploy:
-    <<: *defaults
     docker:
-      - image: circleci/python:3.6.3
-    environment:
-      S3_BUCKET_NAME: <<YOUR BUCKET NAME HERE>>
+      - image: node:8.10.0
     steps:
+      - checkout 
       - attach_workspace:
           at: ./
       - run:
-          name: Install AWS CLI
-          command: pip install awscli --upgrade --user
+          name: Disable jekyll builds
+          command: touch ./_site/.nojekyll
       - run:
-          name: Upload to s3
-          command: ~/.local/bin/aws s3 sync ./_site s3://$S3_BUCKET_NAME/ --delete --acl public-read
-workflows:
+          name: Install and configure dependencies
+          command: | 
+            npm install -g --silent gh-pages@2.0.1
+            git config user.email "jaron.manyama@sap.com"
+            git config user.name "jaron-manyama"
+      - run:
+          name: Deploy docs to gh-pages branch
+          command: gh-pages --dotfiles --message "[skip ci] Updates" --dist ./_site
+      - add_ssh_keys:
+          fingerprints:
+            - 2d:8e:36:81:5c:cc:30:49:bb:49:9e:b2:70:24:d1:13
+workflows:         
   version: 2
   test-deploy:
     jobs:

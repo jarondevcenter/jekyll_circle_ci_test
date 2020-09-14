@@ -18,7 +18,7 @@
 <meta property="og:url" content="http://localhost:4000/test.html" />
 <meta property="og:site_name" content="Your awesome title" />
 <script type="application/ld+json">
-{"@type":"WebPage","headline":"Jaron Test","description":"Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.","url":"http://localhost:4000/test.html","@context":"https://schema.org"}</script>
+{"@type":"WebPage","url":"http://localhost:4000/test.html","description":"Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.","headline":"Jaron Test","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   </head>
@@ -30,13 +30,16 @@
   <nav><!--FOR EACH ITEM IN THE navigation.yml file-->
     <!--ACCESSES _data/navigation.yml-->
    <!--HOME & ABOUT LINKS --> <!--IF PG IS CURRENT PG, TURN LINK RED WITH CSS/SASS CLASS-->  <!--DISPLAY PG NAME-->
-      <a href="/" >Home</a>
+      <a href="/"  class="all" %} >Home</a>
+    
     <!--ACCESSES _data/navigation.yml-->
    <!--HOME & ABOUT LINKS --> <!--IF PG IS CURRENT PG, TURN LINK RED WITH CSS/SASS CLASS-->  <!--DISPLAY PG NAME-->
-      <a href="/about.html" >About</a>
+      <a href="/about.html"  class="all" %} >About</a>
+    
     <!--ACCESSES _data/navigation.yml-->
    <!--HOME & ABOUT LINKS --> <!--IF PG IS CURRENT PG, TURN LINK RED WITH CSS/SASS CLASS-->  <!--DISPLAY PG NAME-->
-      <a href="/blog.html" >Blog</a>
+      <a href="/blog.html"  class="all" %} >Blog</a>
+    
     
   </nav>
   
