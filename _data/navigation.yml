@@ -1,16 +1,16 @@
-- name: Home
-  link: /
-- name: About
-  link: /about.html
-- name: Blog
-  link: /blog.html
-
-
 #- name: Home
- # link: https://jarondevcenter.github.io/jekyll_circle_ci_test/
+ # link: /
 #- name: About
- # link: https://jarondevcenter.github.io/jekyll_circle_ci_test/about.html
+ # link: /about.html
 #- name: Blog
- # link: https://jarondevcenter.github.io/jekyll_circle_ci_test/blog.html
-#- name: Staff
- # link: https://jarondevcenter.github.io/jekyll_circle_ci_test/staff.html
+ # link: /blog.html
+
+
+- name: Home
+  link: https://jarondevcenter.github.io/jekyll_circle_ci_test/
+- name: About
+  link: https://jarondevcenter.github.io/jekyll_circle_ci_test/about.html
+- name: Blog
+  link: https://jarondevcenter.github.io/jekyll_circle_ci_test/blog.html
+- name: Staff
+  link: https://jarondevcenter.github.io/jekyll_circle_ci_test/staff.html
