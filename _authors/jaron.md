@@ -2,6 +2,6 @@
 short_name: jaron
 name: Jaron Manyama
 position: Blogger
-permalink: https://jarondevcenter.github.io/jekyll_circle_ci_test/_authors/jaron.html
+permalink: /jekyll_circle_ci_test/_authors/jaron.html
 ---
 Jaron is a Test Blogger
