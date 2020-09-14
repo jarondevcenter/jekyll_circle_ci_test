@@ -1,0 +1,14 @@
+{
+	"version": 3,
+	"file": "styles.css",
+	"sources": [
+		"styles.scss",
+		"_sass/main.scss"
+	],
+	"sourcesContent": [
+		"@import \"main\";\n\n//FALSE ERROR DUE TO VSCODE LINTER NOT LIKING FRONT MATTER FOR THE CSS THEME OVERRIDE; IGNORE\n\n//styles.scss is an extension to CSS; USED FOR BETTER CSS ORGANIZATION\n//@IMPORT \"MAIN\" TELLS SASS TO LOOK FOR THE FILE 'main.css' in the _sass/ DIRECTORY BY DEFAULT\n",
+		".current {\n    color: green;\n  }\n\n  //PRIMARY CSS FILE FOR SITE STYLING; BEING REFERENCED BY THE 'styles.scss' file in the ASSETS/CSS DIRECTORY"
+	],
+	"names": [],
+	"mappings": "ACAA,AAAA,QAAQ,CAAC,EACL,KAAK,EAAE,KAAK,GACb"
+}
