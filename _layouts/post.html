@@ -16,7 +16,7 @@ writer: Jaron Variable
     <!--Access all the Authors, where the 'author' name on the post.md file, matches the 'short_name' on the name.md file; link them together-->
     {% assign author = site.authors | where: 'short_name', page.author | first %}
     {% if author %}<!--If you find a match-->
-      - <a href="{{ jekyll_circle_ci_test.author.url }}">{{ author.name }}</a><!--Display the Author's Name, with the url to their name.md file -->
+      - <a href="{{ jekyll_circle_ci_test/author.url }}">{{ author.name }}</a><!--Display the Author's Name, with the url to their name.md file -->
     {% endif %}
   </p>
 
