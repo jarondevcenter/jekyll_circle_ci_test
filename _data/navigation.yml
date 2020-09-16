@@ -12,5 +12,5 @@
   link: https://jarondevcenter.github.io/jekyll_circle_ci_test/about.html
 - name: Blog
   link: https://jarondevcenter.github.io/jekyll_circle_ci_test/blog.html
-- name: Staff
+- name: Staff/Team
   link: https://jarondevcenter.github.io/jekyll_circle_ci_test/staff.html
