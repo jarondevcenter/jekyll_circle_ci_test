@@ -7,8 +7,8 @@
 	],
 	"sourcesContent": [
 		"@import \"main\";\n\n//FALSE ERROR DUE TO VSCODE LINTER NOT LIKING FRONT MATTER FOR THE CSS THEME OVERRIDE; IGNORE\n\n//styles.scss is an extension to CSS; USED FOR BETTER CSS ORGANIZATION\n//@IMPORT \"MAIN\" TELLS SASS TO LOOK FOR THE FILE 'main.css' in the _sass/ DIRECTORY BY DEFAULT\n",
-		".current {\r\n    color: green;\r\n  }\r\n\r\n  //PRIMARY CSS FILE FOR SITE STYLING; BEING REFERENCED BY THE 'styles.scss' file in the ASSETS/CSS DIRECTORY\r\n\r\n  .all {\r\n    color: orange;\r\n  }"
+		".current {\r\n    color: green;\r\n  }\r\n\r\n  //PRIMARY CSS FILE FOR SITE STYLING; BEING REFERENCED BY THE 'styles.scss' file in the ASSETS/CSS DIRECTORY\r\n\r\n  .all {\r\n    color: orange;\r\n  }\r\n\r\n  a :hover {\r\n    color: yellow;\r\n  }\r\n\r\n  body {\r\n    background-color: gray;\r\n  }"
 	],
 	"names": [],
-	"mappings": "ACAA,AAAA,QAAQ,CAAC,EACL,KAAK,EAAE,KAAK,GACb;;AAID,AAAA,IAAI,CAAC,EACH,KAAK,EAAE,MAAM,GACd"
+	"mappings": "ACAA,AAAA,QAAQ,CAAC,EACL,KAAK,EAAE,KAAK,GACb;;AAID,AAAA,IAAI,CAAC,EACH,KAAK,EAAE,MAAM,GACd;;AAED,AAAA,CAAC,EAAE,KAAK,CAAC,EACP,KAAK,EAAE,MAAM,GACd;;AAED,AAAA,IAAI,CAAC,EACH,gBAAgB,EAAE,IAAI,GACvB"
 }

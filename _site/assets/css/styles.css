@@ -2,4 +2,8 @@
 
 .all { color: orange; }
 
+a :hover { color: yellow; }
+
+body { background-color: gray; }
+
 /*# sourceMappingURL=styles.css.map */
